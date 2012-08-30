@@ -2,3 +2,11 @@
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #   prefix:   /_internal
+
+index:
+      pattern: /index/
+      defaults: {_controller: AcmeShowStuff:ShowStuff:index}
+
+adminboard:
+      pattern: /adminboard/
+      defaults: {_controller: AcmeShowStuff:AdminBoard:index}
