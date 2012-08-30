@@ -1,0 +1,8 @@
+
+adminboard:
+       pattern: adminboard
+       defaults: {_controller: AcmeShowStuff:AdminBoard:index}
+
+index:
+       pattern: index
+       defaults: {_controller: AcmeShowStuff:ShowStuff:index}
