@@ -10,3 +10,7 @@ index:
 adminboard:
       pattern: /adminboard/
       defaults: {_controller: AcmeShowStuff:AdminBoard:index}
+
+editadminboard:
+      pattern: /adminboard/{num}
+      defaults: {_controller: AcmeShowStuff:AdminBoard:edit}

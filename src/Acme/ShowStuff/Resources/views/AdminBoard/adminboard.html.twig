@@ -1,7 +1,7 @@
 
 <html>
   <head>
-    <title>Admin Board</title>
+    <title>{{ title_name }}</title>
   </head>
 
   <body>
@@ -13,24 +13,42 @@
       <!--Левый фрейм -->
       <td width='30%'>
       <center>
-      <a href="http://apsheronsk.bozo.ru/index.html"> <img src="../public/images/main.gif" width="207" height="70" title="Restoraunt stuff managment" alt="Restoraunt stuff managment"> </a> 
+      <a href="http://__/index.html"> <img src="../public/images/main.gif" width="207" height="70" title="Logo" alt="Logo"> </a> 
       </center> 
       <br>
       <center><h2>List of Companies</h2></center>
-       
+      <ul>
+        {% for item in companies %}
+          <li>
+             
+             <table border='0'>
+                  <tr>
+                      <td>  <a href=" {{ item.idcompany }}">  {{ item.name }} </a>
+                      <td>  <a href=" {{ item.idcompany }}">  Edit </a>
+                      <td>  <a href=" {{ item.idcompany }}">  Delete </a> 
+             </table>
+             
+          </li>
+        {% endfor%}
+      </ul> 
+
+      {# <!-- {% render "AcmeShowStuff:ShowStuff:getdata" %} --> #}
       <!-- Блок вывода доступных компаний  --> 
 
 
 
       <!-- Правый фрейм--> 
       <td width=70%>
-      <center><strong>Company Details</strong></center> <br>
+      <center><strong> {{ txt }} </strong></center> <br>
    
     
-      {% block mapper %}
+      {% block right %}
+
+             <center> 111 </center>
 
       {% endblock %}
     
+      {% include "AcmeShowStuff:AdminBoard:admin_right_block.html.twig"%}
 
       </table>
       </center>
