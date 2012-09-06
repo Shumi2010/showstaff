@@ -14,3 +14,19 @@ adminboard:
 editadminboard:
       pattern: /adminboard/{num}
       defaults: {_controller: AcmeShowStuff:AdminBoard:edit}
+
+addcompany:
+      pattern: /addcompany/
+      defaults: {_controller: AcmeShowStuff:AdminBoard:addcompany}
+
+createcompany:
+      pattern: /createcompany/
+      defaults: {_controller: AcmeShowStuff:AdminBoard:createcompany}
+
+editcompany:
+      pattern: /editcompany/{num}
+      defaults: {_controller: AcmeShowStuff:AdminBoard:editforce}
+
+deletecompany:
+      pattern: /deletecompany/{num_id}
+      defaults: {_controller: AcmeShowStuff:AdminBoard:deletecompany}

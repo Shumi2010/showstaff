@@ -23,15 +23,18 @@
              
              <table border='0'>
                   <tr>
-                      <td>  <a href=" {{ item.idcompany }}">  {{ item.name }} </a>
-                      <td>  <a href=" {{ item.idcompany }}">  Edit </a>
-                      <td>  <a href=" {{ item.idcompany }}">  Delete </a> 
+                      <td>  <a href=" {{ item.idcompanies }}">  {{ item.name }} </a>
+                      <td>  <a href=" {{ item.idcompanies }}">  Edit </a>
+                      <td>  <a href=" {{ path('deletecompany', {'num_id':item.idcompanies}) }} ">  Delete </a> 
              </table>
              
           </li>
         {% endfor%}
       </ul> 
 
+      <!-- Ссылка добавления компании -->
+      <center> <a href="{{ path('addcompany') }}" > Add company </a></center>
+         
       {# <!-- {% render "AcmeShowStuff:ShowStuff:getdata" %} --> #}
       <!-- Блок вывода доступных компаний  --> 
 
